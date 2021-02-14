@@ -1,0 +1,722 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+@use "sass:color";
+/* line 3, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+body, html {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* line 38, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.container {
+  max-width: 1280px;
+  margin: auto;
+  position: relative;
+}
+
+/* line 44, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.header {
+  padding: 1rem 1rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1000;
+}
+
+/* line 50, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.header__logo {
+  font-family: "Shrikhand", "cursive";
+  margin: 0;
+  text-align: center;
+}
+
+/* line 57, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.footer {
+  background-color: #353535;
+}
+
+/* line 60, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+/* line 66, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.footer__logo {
+  color: white;
+  font-family: "Shrikhand", "cursive";
+  margin: 0;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* line 74, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 80, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.footer__listElt {
+  margin: 0.5rem 0;
+}
+
+/* line 83, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.footer__listElt:first-child {
+  margin-top: 0;
+}
+
+/* line 87, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.footer__listElt:last-child {
+  margin-bottom: 0;
+}
+
+/* line 92, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.footer__link {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 96, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+/* line 101, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.footer__icon {
+  width: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+/* line 109, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  animation: loader 0.01s;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 124, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.loader__item {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 1rem;
+  animation: jump 1s;
+  animation-iteration-count: 1;
+}
+
+/* line 131, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.loader__itemContainer {
+  display: flex;
+  width: 5rem;
+  justify-content: space-between;
+}
+
+/* line 137, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.loader__item--1 {
+  background-color: #9356DC;
+}
+
+/* line 141, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.loader__item--2 {
+  background-color: #FF79DA;
+  animation-delay: 0.25s;
+}
+
+/* line 146, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.loader__item--3 {
+  background-color: #99E2D0;
+  animation-delay: 0.5s;
+}
+
+/* line 155, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.local {
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem 1rem;
+  background-color: #f3f3f3;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+/* line 163, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.local__icon {
+  margin-right: 1rem;
+}
+
+/* line 167, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.local__text {
+  font-weight: 700;
+}
+
+/* line 172, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.hero {
+  padding: 2rem;
+  text-align: center;
+  background-color: #fafafa;
+}
+
+/* line 177, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.hero__title {
+  margin: 0;
+}
+
+/* line 181, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.hero__subtitle {
+  font-weight: 300;
+  margin: 1.5rem 0;
+}
+
+/* line 186, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.hero__btn {
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  color: white;
+  background-color: #686868;
+  cursor: pointer;
+  transition-duration: 0.25s;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+
+/* line 22, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.hero__btn:hover {
+  background-color: white;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+}
+
+/* line 27, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.hero__btn a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* line 191, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.tuto {
+  padding: 2rem 1rem;
+}
+
+/* line 194, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.tuto__title {
+  margin-top: 0;
+}
+
+/* line 198, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.tuto__steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: compteListe;
+}
+
+@media (min-width: 64rem) {
+  /* line 198, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+  .tuto__steps {
+    display: flex;
+  }
+}
+
+/* line 209, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.tuto__step {
+  padding: 1.5rem;
+  margin: 1rem 0 1rem 0.75rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+  border-radius: 1.25rem;
+  background-color: #f6f6f6;
+  display: flex;
+  position: relative;
+}
+
+@media (min-width: 64rem) {
+  /* line 209, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+  .tuto__step {
+    flex: 1;
+    margin: 0;
+    margin-left: 2rem;
+  }
+  /* line 223, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+  .tuto__step:first-child {
+    margin-left: 0.75rem;
+  }
+}
+
+/* line 228, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.tuto__step:first-child {
+  margin-top: 0;
+}
+
+/* line 232, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.tuto__step:last-child {
+  margin-bottom: 0;
+}
+
+/* line 236, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.tuto__step::before {
+  counter-increment: compteListe 1;
+  content: counter(compteListe) " ";
+  background: #9356DC;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  left: -0.75rem;
+}
+
+/* line 252, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.tuto__icon {
+  margin-right: 1rem;
+  color: #7e7e7e;
+}
+
+/* line 258, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 2rem 1rem;
+}
+
+/* line 263, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+@media (min-width: 64rem) {
+  /* line 263, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* line 274, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.card {
+  background-color: white;
+  border-radius: 1rem;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* line 282, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.card__img {
+  height: 12rem;
+  width: 100%;
+  border: transparent solid 0px;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: none;
+  object-fit: cover;
+}
+
+/* line 291, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.card__badge {
+  background-color: #99E2D0;
+  color: #1b6150;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+  position: absolute;
+  top: 1rem;
+  right: 0.75rem;
+}
+
+/* line 301, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.card__footer {
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* line 308, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.card__content {
+  flex: 1;
+}
+
+/* line 312, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.card__title {
+  margin: 0;
+  margin-bottom: 0.25rem;
+}
+
+/* line 317, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.card__subtitle {
+  margin: 0;
+}
+
+/* line 321, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.card__btn {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: transparent 0px solid;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 332, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.card__like {
+  background-color: white !important;
+}
+
+/* line 340, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.header--withBackArrow {
+  position: relative;
+}
+
+/* line 344, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.header__arrow {
+  position: absolute;
+  left: 2rem;
+  height: 2rem;
+  width: 2rem;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: black;
+}
+
+/* line 359, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.heroImg {
+  max-width: 100%;
+  max-height: 32rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* line 366, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.menu {
+  margin-top: -4rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #f6f6f6;
+  z-index: 1;
+  position: relative;
+}
+
+/* line 373, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.menu__header {
+  padding: 1rem 2rem 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* line 380, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.menu__title {
+  font-family: "Shrikhand", "cursive";
+}
+
+/* line 384, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.menu__btn {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: transparent 0px solid;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  background-color: black;
+}
+
+/* line 397, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.menu__btn:hover::before {
+  opacity: 1;
+}
+
+/* line 401, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.menu__btn::before {
+  opacity: 0;
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+}
+
+/* line 414, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.menu__like {
+  transition-duration: .25s;
+  background-color: #f6f6f6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: lighten;
+}
+
+/* line 430, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.menu__btn:hover .menu__like--noBg {
+  opacity: 0;
+}
+
+/* line 437, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.submenus {
+  display: grid;
+}
+
+@media (min-width: 64rem) {
+  /* line 437, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+  .submenus {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+  }
+}
+
+/* line 446, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.submenu {
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 1rem;
+}
+
+/* line 451, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.submenu__title {
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 0.5rem;
+  font-weight: normal;
+}
+
+/* line 457, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.submenu__title::after {
+  content: "";
+  width: 3rem;
+  height: 0.25rem;
+  background-color: #99E2D0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+/* line 469, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.menuItem {
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  border-radius: 0.75rem;
+  margin: 1rem 0;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  animation: itemAppear .6s;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+  transform: scale(0);
+  max-width: 100%;
+}
+
+/* line 484, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.menuItem__header {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 1;
+}
+
+/* line 491, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.menuItem__title {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* line 498, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.menuItem__description {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* line 505, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.menuItem__price {
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-left: 0.5rem;
+}
+
+/* line 513, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.menuItem__confirmation {
+  background-color: #99E2D0;
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+}
+
+/* line 523, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.menuItem:hover .menuItem__confirmation {
+  margin-right: -1rem;
+}
+
+/* line 527, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.menuItem__wrapIcon {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
+}
+
+/* line 540, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.menuItem:hover .menuItem__wrapIcon {
+  transform: rotate(0);
+}
+
+/* line 544, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.menuItem__icon {
+  color: #99E2D0;
+}
+
+/* line 550, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.delay-0 {
+  animation-delay: 0s;
+}
+
+/* line 550, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+/* line 550, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+/* line 550, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+/* line 550, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+/* line 550, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.delay-5 {
+  animation-delay: 0.5s;
+}
+
+/* line 550, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.delay-6 {
+  animation-delay: 0.6s;
+}
+
+/* line 550, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.delay-7 {
+  animation-delay: 0.7s;
+}
+
+/* line 550, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.delay-8 {
+  animation-delay: 0.8s;
+}
+
+/* line 555, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.wrapBtn {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+/* line 562, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.commandBtn {
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  color: white;
+  background-color: #686868;
+  cursor: pointer;
+  transition-duration: 0.25s;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+/* line 22, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.commandBtn:hover {
+  background-color: white;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+}
+
+/* line 27, ../../../../../Documents/GitHub/projet-3/sass/style.scss */
+.commandBtn a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@keyframes itemAppear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(0.5rem);
+  }
+  75% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
